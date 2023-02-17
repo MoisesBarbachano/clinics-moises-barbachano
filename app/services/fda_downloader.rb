@@ -11,7 +11,7 @@ class FdaDownloader
   end
 
   def import_data
-    content = open(url)
+    content = URI.parse(url).open
 
     Zip::File.open_buffer(content) do |zip|
       zip.each do |entry|
