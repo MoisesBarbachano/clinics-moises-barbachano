@@ -38,7 +38,7 @@ class FdaDownloader
           facility: clinic[0],
           phone_number: clinic[7],
           city: clinic[4],
-          zip_code: clinic[6]
+          zip_code: clinic[6].to_i
         )
       end
     end
